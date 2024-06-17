@@ -1,0 +1,26 @@
+{
+    "1": [
+        {"key": "Discontinued","name": "Discontinued", "visible": true},
+        {"key": "QuantityPerUnit","name": "QuantityPerUnit", "visible": false},
+        {"key": "ReorderLevel","name": "ReorderLevel", "visible": false},
+        {"key": "SupplierID","name": "SupplierID", "visible": false},
+        {"key": "UnitPrice","name": "UnitPrice", "visible": false},
+        {"key": "UnitsInStock","name": "UnitsInStock", "visible": false},
+        {"key": "UnitsOnOrder","name": "UnitsOnOrder", "visible": false},
+        {"key": "CategoryID","name": "CategoryID", "visible": false},
+        {"key": "ProductID","name": "ProductID", "visible": false},
+        {"key": "ProductName","name": "ProductName", "visible": false}
+    ],
+    "2": [
+        {"key": "Discontinued","name": "Discontinued", "visible": false},
+        {"key": "QuantityPerUnit","name": "QuantityPerUnit", "visible": false},
+        {"key": "ReorderLevel","name": "ReorderLevel", "visible": false},
+        {"key": "SupplierID","name": "SupplierID", "visible": true},
+        {"key": "UnitPrice","name": "UnitPrice", "visible": true},
+        {"key": "UnitsInStock","name": "UnitsInStock", "visible": false},
+        {"key": "UnitsOnOrder","name": "UnitsOnOrder", "visible": false},
+        {"key": "CategoryID","name": "CategoryID", "visible": false},
+        {"key": "ProductID","name": "ProductID", "visible": false},
+        {"key": "ProductName","name": "ProductName", "visible": false}
+    ]
+}

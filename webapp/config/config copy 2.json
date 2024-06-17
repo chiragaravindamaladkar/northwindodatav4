@@ -1,0 +1,9 @@
+{
+    "1": [
+        {"key": "Discontinued","name": "Discontinued", "visible": true}
+    ],
+    "2": [
+        {"key": "SupplierID","name": "SupplierID", "visible": true},
+        {"key": "UnitPrice","name": "UnitPrice", "visible": true}
+    ]
+}

@@ -1,0 +1,108 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/V4/Northwind/Northwind.svc/$metadata">
+        <edmx:Include Namespace="NorthwindModel"/>
+        <edmx:Include Namespace="ODataWebExperimental.Northwind.Model"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+            <Annotations Target="NorthwindModel.Category">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CategoryID"/>
+                            <PropertyValue Property="Label" String="CategoryID"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CategoryName"/>
+                            <PropertyValue Property="Label" String="CategoryName"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Description"/>
+                            <PropertyValue Property="Label" String="Description"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>CategoryID</PropertyPath>
+                        <PropertyPath>CategoryName</PropertyPath>
+                        <PropertyPath>Description</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Products"/>
+                            <PropertyValue Property="ID" String="Products"/>
+                            <PropertyValue Property="Target" AnnotationPath="Products/@UI.LineItem#Products"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="NorthwindModel.Category/CategoryID">
+                <Annotation Term="Common.Label" String="CategoryID"/>
+            </Annotations>
+            <Annotations Target="NorthwindModel.Category/CategoryName">
+                <Annotation Term="Common.Label" String="CategoryName"/>
+            </Annotations>
+            <Annotations Target="NorthwindModel.Category/Description">
+                <Annotation Term="Common.Label" String="Description"/>
+            </Annotations>
+            <Annotations Target="NorthwindModel.Category/Picture">
+                <Annotation Term="Common.Label" String="Picture"/>
+            </Annotations>
+            <Annotations Target="NorthwindModel.Product">
+                <Annotation Term="UI.LineItem" Qualifier="Products">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CategoryID"/>
+                            <PropertyValue Property="Label" String="CategoryID"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Discontinued"/>
+                            <PropertyValue Property="Label" String="Discontinued"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ProductID"/>
+                            <PropertyValue Property="Label" String="ProductID"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ProductName"/>
+                            <PropertyValue Property="Label" String="ProductName"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="QuantityPerUnit"/>
+                            <PropertyValue Property="Label" String="QuantityPerUnit"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ReorderLevel"/>
+                            <PropertyValue Property="Label" String="ReorderLevel"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SupplierID"/>
+                            <PropertyValue Property="Label" String="SupplierID"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="UnitPrice"/>
+                            <PropertyValue Property="Label" String="UnitPrice"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="UnitsInStock"/>
+                            <PropertyValue Property="Label" String="UnitsInStock"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="UnitsOnOrder"/>
+                            <PropertyValue Property="Label" String="UnitsOnOrder"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
