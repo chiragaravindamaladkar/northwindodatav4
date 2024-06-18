@@ -37,11 +37,14 @@ sap.ui.define([
 					var oTable = this.getView().byId("fe::table::Products::LineItem::Products"),
 						oCurState = oTable.getCurrentState();
 					this.getView().setBusy(true);
-					oCurState.items = [];
-					this.oStateUtil.applyExternalState(this.getView().byId("fe::table::Products::LineItem::Products"), oCurState);
-					setTimeout(function () {
-						// debugger;
-						var iCategoryID = this.base.getExtensionAPI().getBindingContext().getObject().CategoryID,
+					// oCurState.items = [];
+					// this.oStateUtil.applyExternalState(this.getView().byId("fe::table::Products::LineItem::Products"), oCurState);
+					// setTimeout(function () {
+					// debugger;
+					// var iCategoryID = this.base.getExtensionAPI().getBindingContext().getObject().CategoryID,
+					oContext.requestObject().then(function (oRes) {
+
+						var iCategoryID = oRes.CategoryID,
 							oTable = this.getView().byId("fe::table::Products::LineItem::Products"),
 							oCurState = oTable.getCurrentState(),
 							i, j, bEditFlag = false,
@@ -64,7 +67,9 @@ sap.ui.define([
 						// debugger;
 						this.oStateUtil.applyExternalState(this.getView().byId("fe::table::Products::LineItem::Products"), oCurState);
 						this.getView().setBusy(false);
-					}.bind(this), 1000);
+						// }.bind(this), 1000);
+
+					}.bind(this));
 				}.bind(this));
 
 				// setTimeout(function () {
